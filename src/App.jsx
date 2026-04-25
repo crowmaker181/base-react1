@@ -8,7 +8,11 @@ import ProductCard from './componentes/ProductCard.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  const products = [
+    { id: 1, title: 'laptop', price: 2000 },
+    { id: 2, title: 'teclado', price: 100 },
+    { id: 3, title: 'mouse', price: 50 },
+  ];
   return (
     <>
     <Navbar/> 
@@ -20,10 +24,23 @@ function App() {
           <h3>Cesde bogota</h3>
         </section>
     
+    <button onClick={() => console.log(products)}></button>
+
+    <button onClick={() =>{
+      setproducts([
+        { id: 1, title: 'laptop', price: 2000 },
+        { id: 2, title: 'teclado', price: 100 },
+        { id: 3, title: 'mouse', price: 50 },
+        { id: products.length + 1, title: 'nuevo producto', price: 500 },
+      ])
+    }}>
+
+
+    </button>
   </section>
-    <ProductCard/>
-    <ProductCard/>
-    <ProductCard/>
+    <ProductCard title="laptop" price={2000}/>
+    <ProductCard title="teclado" price={100}/>
+    <ProductCard title="mouse" price={50}/>
     </>
     //   <section id="center">
     //     <div className="hero">

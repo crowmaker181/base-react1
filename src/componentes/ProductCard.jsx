@@ -1,9 +1,7 @@
-function ProductCard(){
-    return(
-        <section>
-            <h3>producto</h3>
-            <p>$100</p>
-        </section>
-    )
-}
-export default ProductCard;
+function ProductCard(props) {
+  return (
+    <div>
+      <h3>{props.title}</h3>
+      <p>${props.price}</p>
+    </div> ) }
+export default ProductCard
